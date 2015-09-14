@@ -1,0 +1,179 @@
+// ----- Mixins -----
+
+// REM  mixin - http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
+@function parseInt($n) { 
+    @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+    $px : (); 
+    $rem: (); 
+
+    @each $value in $values { 
+
+        @if $value == 0 or $value == auto { 
+            $px : append($px , $value);
+            $rem: append($rem, $value);
+        } @else { 
+            $unit: unit($value);   
+            $val: parseInt($value); 
+
+            @if $unit == "px" {  
+                $px : append($px,  $value);
+                $rem: append($rem, ($val / 10 + rem));
+            }
+
+            @if $unit == "rem" { 
+                $px : append($px,  ($val * 10 + px));
+                $rem: append($rem, $value);
+            }
+        }
+    }
+
+    @if $px == $rem {     
+        #{$property}: $px;  
+    } @else {
+        #{$property}: $px;  
+        #{$property}: $rem;
+    }
+}
+
+
+// Setup a webfont path (version is used by fontello)
+@mixin webfont($name, $fileName, $filePath, $version) {
+    $fontVersion: '';
+    @if $version != '' {
+        $fontVersion: '?' + $version;
+    }
+
+    $fontEOT: $filePath + $fileName + '.eot' + $fontVersion;
+    $fontEOTIE: $filePath + $fileName + '.eot' + $fontVersion + '#iefix';
+    $fontWOFF: $filePath + $fileName + '.woff' + $fontVersion;
+    $fontTTF: $filePath + $fileName + '.ttf' + $fontVersion;
+    $fontSVG: $filePath + $fileName + '.eot' + $fontVersion + '#' + $name;
+
+    font-family: $name;
+    src: url($fontEOT);
+    src: url($fontEOTIE) format('embedded-opentype'),
+    url($fontWOFF) format('woff'),
+    url($fontTTF) format('truetype'),
+    url($fontSVG) format('svg');
+}
+
+
+// Creates a triangle shape on an element http://css-tricks.com/examples/ShapesOfCSS/
+// E.G. @include triangle(down, 10px, $color-red, 10px, top); 
+// Creates a pointing down triangle, 10px in size, colour red red, left: 10px and top: 0
+
+// E.G. with optional arguments @include triangle(down, 10px, $color-red, 10px, 10px, right, bottom, before); 
+// Creates a pointing down triangle, 10px in size, colour red red, right: 10px, bottom: 10px on the before pseudo element;
+
+// E.G. double down triangle, second triangle is not antialiased to make the line thinner
+// @include triangle(down, 10px, $color-red, 10px, 10px, $positionPseudo: 'after'); 
+// @include triangle(down, 12px, #000, 8px, 10px, $positionPseudo: 'before', $antialias: false); 
+
+@mixin triangle($dir, $size, $color, $positionX, $positionY, $positionXProperty: 'left', $positionYProperty: 'top', $positionPseudo: 'before', $antialias: true) { 
+
+    position: relative;
+
+    $transform: '';
+
+    &:#{$positionPseudo} {
+        position: absolute;
+        content: '';
+        width: 0; 
+        height: 0; 
+        border: $size transparent solid;
+
+        // The direction of the triangle
+        @if ($dir == "top" or $dir == "up") {
+            border-bottom-color: $color;
+        }
+        @else if ($dir == "right" or $dir == "after") {
+            border-left-color: $color;
+        }
+        @else if ($dir == "bottom" or $dir == "down") {
+            border-top-color: $color;
+        }
+        @else if ($dir == "left" or $dir == "before") {
+            border-right-color: $color;
+        }
+
+        // The X position of the triangle
+        @if ($positionX == "left") {
+            left: 0;
+        }
+        @else if ($positionX == "right") {
+            right: 0;
+        }
+        @else if ($positionX == "center") {
+            left: 50%;
+            $transform: translateX(-50%);
+        }
+        @else {
+            #{$positionXProperty}: #{$positionX};
+        }
+
+        // The Y position of the triangle
+        @if ($positionY == "top") {
+            top: 0;
+        }
+        @else if ($positionY == "bottom") {
+            bottom: 0;
+        }
+        @else if ($positionY == "center") {
+            top: 50%;
+            $transform: #{$transform} translateY(-50%);
+        }
+        @else {
+            #{$positionYProperty}: #{$positionY};
+        }
+
+        // Antialias the shape
+        @if $antialias { 
+            $transform: #{$transform} scale(0.9999); 
+        }
+
+        transform: #{$transform};
+    }
+}
+
+
+// Centrally align a block, align parent 3d option should be enabled if the block becomes blurry - http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+// E.G. @include align-center() aligns an element vertically
+// E.G. @include align-center($parent: true, $parent3d: true) sets up parent element
+@mixin align-center($axis: 'vertical', $parent: false, $parent3d: false) { 
+
+    $transform: '';
+
+    // Child element
+    @if ($parent != true) {
+        display: block;
+        position: relative;
+
+        // Horizontally center
+        @if ($axis == 'horizontal' or $axis == 'both') {
+            left: 50%;
+            $transform: translateX(-50%);
+        }
+
+        // Vertically center
+        @if ($axis == 'vertical' or $axis == 'both') {
+            top: 50%;
+            $transform: #{$transform} translateY(-50%);
+        }
+
+        transform: #{$transform};
+
+    }
+    // Parent element
+    @else {
+        overflow: hidden;
+
+        @if ($parent3d) {
+            transform-style: preserve-3d;
+        }
+
+    }
+
+}

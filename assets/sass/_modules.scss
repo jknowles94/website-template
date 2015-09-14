@@ -1,0 +1,91 @@
+// ----- Modules -----
+
+
+// ----- Sample module -----
+.grid {
+
+&.fullwidth { padding-bottom: 0; }
+
+	.item {
+		padding: 15px;
+		margin-bottom: 30px;
+		background: #fff;
+
+		> img:first-child, > .overlay-wrap:first-child {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+// ----- XS - 479px and down -----
+@media (max-width: $screen-xs-custom-max) {  
+
+}
+
+// 480px and up
+@media (min-width: $screen-xs-custom-min) {  
+
+}
+
+// 599px and down
+@media (max-width: $screen-xsm-custom-max) {  
+
+}
+
+// 600px and up
+@media (min-width: $screen-xsm-custom-min) {  
+
+}
+
+// 767px and down
+@media (max-width: $screen-sm-custom-max) { 
+
+}
+
+
+// ----- SM - 768px and up ----- 
+@media (min-width: $screen-sm-min) { 
+// ----- Sample flexbox module - Keeps the grid cards an equal height -----
+	.flexbox .grid .row, .row-flex {
+		display: flex;
+		flex-wrap: wrap;
+
+		> div[class*='col-'] {
+			display: flex;
+			flex: 0 1 auto;
+			margin: -0.2px; // Fixes chrome bug
+		}
+
+			.item {
+				max-width: 100%;
+			}
+	}
+}
+
+// 768px - 991px
+@media (min-width: $screen-sm-custom-min) and (max-width: $screen-md-custom-max) { 
+
+}
+
+// 991px and down
+@media (max-width: $screen-md-custom-max) {  
+
+}
+
+
+// ----- MD - 992px and up  -----
+@media (min-width: $screen-md-custom-min) {  
+
+}
+
+// 992px - 1999px
+@media (min-width: $screen-md-custom-min) and (max-width: $screen-lg-custom-max) {  
+
+}
+
+
+// ----- LG - 1200px and up -----
+@media (min-width: $screen-lg-custom-min) { 
+
+}

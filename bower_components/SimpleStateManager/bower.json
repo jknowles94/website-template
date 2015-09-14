@@ -1,0 +1,13 @@
+{
+  "name": "SimpleStateManager",
+  "version": "2.4.1",
+  "main": "src/ssm.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "devDependencies": {
+    "jquery": "~1.10.2"
+  }
+}

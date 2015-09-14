@@ -1,0 +1,23 @@
+{
+  "name": "SimpleStateManager",
+  "version": "2.4.1",
+  "main": "src/ssm.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "devDependencies": {
+    "jquery": "~1.10.2"
+  },
+  "homepage": "https://github.com/jonathan-fielding/SimpleStateManager",
+  "_release": "2.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.4.1",
+    "commit": "7f3aa934c1ae49d57d7051428efc0bc7042b2df4"
+  },
+  "_source": "git://github.com/jonathan-fielding/SimpleStateManager.git",
+  "_target": "~2.4.0",
+  "_originalSource": "SimpleStateManager"
+}

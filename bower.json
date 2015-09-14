@@ -1,0 +1,15 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.4",
+    "jquery": "~1.11.2",
+    "modernizr": "~2.8.3",
+    "SimpleStateManager": "~2.4.0",
+    "jquery-cycle2": "~2.1.6",
+    "respond": "~1.4.2",
+    "jquery-waypoints": "3.1.1",
+    "Slidebars": "~0.10.2",
+    "bootstrapValidator": "~0.5.3"    
+  }
+}
