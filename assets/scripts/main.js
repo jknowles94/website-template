@@ -124,6 +124,8 @@ var website = (function () {
 				});
 			}
 
+			$('input, textarea').placeholder();
+
 		}
 
 	};
