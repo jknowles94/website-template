@@ -149,7 +149,7 @@
     // Child element
     @if ($parent != true) {
         display: block;
-        position: relative;
+        position: absolute;
 
         // Horizontally center
         @if ($axis == 'horizontal' or $axis == 'both') {

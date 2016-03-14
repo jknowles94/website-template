@@ -9072,7 +9072,7 @@ nav ul {
 /* line 149, ../sass/_base.scss */
 .cycle-prev, .cycle-next {
   display: block;
-  position: relative;
+  position: absolute;
   top: 50%;
   -webkit-transform:  translateY(-50%);
       -ms-transform:  translateY(-50%);
@@ -9147,7 +9147,7 @@ nav ul {
 /* line 195, ../sass/_base.scss */
 .overlay-text {
   display: block;
-  position: relative;
+  position: absolute;
   top: 50%;
   -webkit-transform:  translateY(-50%);
       -ms-transform:  translateY(-50%);
@@ -9352,7 +9352,7 @@ nav ul {
 /* line 102, ../sass/_layout.scss */
 .header-img .header-text {
   display: block;
-  position: relative;
+  position: absolute;
   top: 50%;
   -webkit-transform:  translateY(-50%);
       -ms-transform:  translateY(-50%);
