@@ -9154,7 +9154,7 @@ nav ul {
           transform:  translateY(-50%);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /* line 223, ../sass/_base.scss */
   html {
     font-size: 9px;
