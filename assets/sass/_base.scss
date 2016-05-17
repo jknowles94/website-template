@@ -136,46 +136,25 @@ nav ul { list-style: none; list-style-image: none; }
 .cycle-slideshow { 
 	position: relative;
 
-	.cycle-slide { width: 100%; }
-	.item { display: none; }
-	.item-first { display: block; }
- }
- 
-.cycle-carousel {
-	.cycle-slide { width: auto; }
-	img { width: auto; height: auto; }
+	.item {
+		position: relative;
+	}
 }
 
-	.cycle-prev, .cycle-next { 
-		@include align-center();
-		position: absolute;
-		color: #fff;
-		@include rem(font-size, 50px);
-		text-shadow: 1px 1px 4px rgba(0,0,0,.5);
-		cursor: pointer;
-		z-index: 1000;
-	}
-	.cycle-prev:hover, .cycle-next:hover { 
-		color: $color-grey-medium;
-	}
-	.cycle-prev { left: 20px; }
-	.cycle-next { right: 20px; }
-
-	.cycle-pager { 
-		position: absolute; 
-		bottom: -10px; 
-		width: 100%; 
-		text-align: center; 
-		z-index: 300; 
-		overflow: hidden;
-	}
-		.cycle-pager span { 
-			display: inline-block;
-			@include rem(font-size, 40px);
-			color: #fff; 
-			cursor: pointer; 
-		}
-		.cycle-pager span:hover, .cycle-pager .cycle-pager-active { color: $color-grey-medium; }
+.cycle-prev, .cycle-next { 
+	@include align-center();
+	position: absolute;
+	color: #fff;
+	@include rem(font-size, 50px);
+	text-shadow: 1px 1px 4px rgba(0,0,0,.5);
+	cursor: pointer;
+	z-index: 1000;
+}
+.cycle-prev:hover, .cycle-next:hover { 
+	color: $color-grey-medium;
+}
+.cycle-prev { left: 20px; }
+.cycle-next { right: 20px; }
 
 
 // Overlays an item over another

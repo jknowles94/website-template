@@ -11,6 +11,7 @@
     "jquery-waypoints": "3.1.1",
     "Slidebars": "~0.10.2",
     "bootstrapValidator": "~0.5.3",
-    "flexboxgrid-sass": "~8.0.3"
+    "flexboxgrid-sass": "~8.0.3",
+    "slick-carousel": "~1.6.0"
   }
 }

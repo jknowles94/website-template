@@ -117,6 +117,11 @@ var website = (function () {
 
 			siteForms.init();
 
+			$('.cycle-slideshow').slick({
+				prevArrow: '<a href="#" class="cycle-prev"><i class="icon-chevron-left"></i></a>',
+				nextArrow: '<a href="#" class="cycle-next"><i class="icon-chevron-right"></i></a>'
+			});
+
 			// SVG fallback
 			if (!Modernizr.svg) {
 				$('img[src*="svg"]').attr('src', function () {

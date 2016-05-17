@@ -1,0 +1,37 @@
+{
+  "name": "flexboxgrid-sass",
+  "version": "8.0.3",
+  "homepage": "https://github.com/hugeinc/flexboxgrid-sass",
+  "authors": [
+    "@dam"
+  ],
+  "description": "Grid based on the flex display property.",
+  "main": "flexboxgrid.scss",
+  "keywords": [
+    "browser",
+    "flexbox",
+    "grid",
+    "sass"
+  ],
+  "license": "Apache 2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test*",
+    "tests*",
+    "demo/"
+  ],
+  "dependencies": {
+    "sass-flex-mixin": "~1.0.1"
+  },
+  "_release": "8.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "8.0.3",
+    "commit": "123bb895a850ad8b664369dfada116c08afc62d3"
+  },
+  "_source": "https://github.com/hugeinc/flexboxgrid-sass.git",
+  "_target": "~8.0.3",
+  "_originalSource": "flexboxgrid-sass"
+}
