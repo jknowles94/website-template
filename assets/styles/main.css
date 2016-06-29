@@ -6892,15 +6892,6 @@ a.thumbnail.active {
 .alert-danger .alert-link {
   color: #843534;
 }
-
-@-webkit-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
 @keyframes progress-bar-stripes {
   from {
     background-position: 40px 0;
@@ -6943,7 +6934,6 @@ a.thumbnail.active {
 /* line 64, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress.active .progress-bar,
 .progress-bar.active {
-  -webkit-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite;
 }
 
@@ -7800,16 +7790,11 @@ button.close {
 }
 /* line 32, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_modals.scss */
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
-  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 /* line 36, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_modals.scss */
 .modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
@@ -8260,28 +8245,22 @@ button.close {
 @media all and (transform-3d), (-webkit-transform-3d) {
   /* line 16, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_carousel.scss */
   .carousel-inner > .item {
-    transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 1000px;
     perspective: 1000px;
   }
   /* line 34, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_carousel.scss */
   .carousel-inner > .item.next, .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     left: 0;
   }
   /* line 39, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_carousel.scss */
   .carousel-inner > .item.prev, .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     left: 0;
   }
   /* line 44, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_carousel.scss */
   .carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     left: 0;
   }
@@ -8856,7 +8835,6 @@ button.close {
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -8886,8 +8864,6 @@ button.close {
 /* line 33, ../../bower_components/slick-carousel/slick/slick.scss */
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -9163,9 +9139,7 @@ nav ul {
   display: block;
   position: absolute;
   top: 50%;
-  -webkit-transform:  translateY(-50%);
-      -ms-transform:  translateY(-50%);
-          transform:  translateY(-50%);
+  transform:  translateY(-50%);
   position: absolute;
   color: #fff;
   font-size: 50px;
@@ -9214,9 +9188,7 @@ nav ul {
   display: block;
   position: absolute;
   top: 50%;
-  -webkit-transform:  translateY(-50%);
-      -ms-transform:  translateY(-50%);
-          transform:  translateY(-50%);
+  transform:  translateY(-50%);
 }
 
 @media (max-width: 768px) {
@@ -9419,9 +9391,7 @@ nav ul {
   display: block;
   position: absolute;
   top: 50%;
-  -webkit-transform:  translateY(-50%);
-      -ms-transform:  translateY(-50%);
-          transform:  translateY(-50%);
+  transform:  translateY(-50%);
   position: absolute;
   text-align: center;
   color: #fff;
@@ -9517,21 +9487,17 @@ nav ul {
 @media (min-width: 768px) {
   /* line 50, ../sass/_modules.scss */
   .flexbox .grid .row, .row-flex {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   /* line 54, ../sass/_modules.scss */
   .flexbox .grid .row > div[class*='col-'], .row-flex > div[class*='col-'] {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
     margin: -0.2px;
   }
   /* line 60, ../sass/_modules.scss */
