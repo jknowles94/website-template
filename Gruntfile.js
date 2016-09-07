@@ -117,7 +117,7 @@ module.exports = function (grunt) {
         notify: {
             compass: {
               options: {
-                title: 'my-site', 
+                title: 'Website Template', 
                 message: 'Compass compiled',
               }
             }
