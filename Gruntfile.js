@@ -41,7 +41,7 @@ module.exports = function (grunt) {
           options: {
             map: '<%= config.sourcemap %>',
             processors: [
-              require('autoprefixer')({browsers: ['last 2 version']})
+              require('autoprefixer')({browsers: ['last 3 version']})
             ]
           },
           dist: {
