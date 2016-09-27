@@ -138,7 +138,6 @@ module.exports = function (grunt) {
                     src: 
                         [ 
                              'bower_components/SimpleStateManager/dist/ssm.min.js',
-                             'bower_components/jquery-colorbox/jquery.colorbox-min.js',
                              'bower_components/bootstrapValidator/dist/js/bootstrapValidator.min.js',
                              'bower_components/respond/dest/respond.min.js',
                         ] 
