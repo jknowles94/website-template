@@ -17,7 +17,7 @@ var spawn = require('../util/spawn');
 var cmd = 'growlnotify';
 var IS_MAC = os.type() === 'Darwin';
 var IS_WINDOWS = os.type() === 'Windows_NT';
-var DEFAULT_IMAGE = path.resolve(__dirname + '../../../images/grunt-logo.png');
+var DEFAULT_IMAGE = path.resolve(__dirname, '../../images/grunt-logo.png');
 
 function macOnly(string) {
   return IS_MAC ? string : '';
@@ -87,8 +87,7 @@ function createTitleArg(title) {
 
 function createMessageArg(message) {
   return [
-    macOnly('-m'),
-    message
+    macOnly('-m ') + message
   ];
 }
 

@@ -1,5 +1,43 @@
 [
 	{
+		"version" : "3.1.2",
+		"date" : "June 17th, 2016", 
+		"items" : [
+			"Fixed a bug where IE11 would reject a media expression that is an empty string, switched to provide a media expersion that is always true as the default."
+		]
+	},
+	{
+		"version" : "3.1.1",
+		"date" : "March 8th, 2016", 
+		"items" : [
+			"Fixed bug that prevented removing states correctly removing the listeners"
+		]
+	},
+	{
+		"version" : "3.1.0",
+		"date" : "February 10th, 2016", 
+		"items" : [
+			"Added isActive method back into library"
+		]
+	},
+	{
+		"version" : "3.0.0",
+		"date" : "June 8th, 2015", 
+		"items" : [
+			"Rewrite to use the matchMedia API",
+			"Add support for media queries",
+			"Major refactor",
+			"Remove legacy browser (IE 8 and below) support"
+		]
+	},
+	{	
+		"version" : "2.4.1",
+		"date" : "May 17, 2015", 
+		"items" : [
+			"Fix browser width when browser is zoomed"
+		] 
+	},
+	{
 		"version" : "2.4.0",
 		"date" : "December 29, 2014", 
 		"items" : [

@@ -1,4 +1,4 @@
-# Simple State Manager 2.4.0
+# Simple State Manager 3.1.3
 
 [![Build Status](https://travis-ci.org/SimpleStateManager/SimpleStateManager.png?branch=master)](https://travis-ci.org/SimpleStateManager/SimpleStateManager) [![Code Climate](https://codeclimate.com/github/SimpleStateManager/SimpleStateManager.png)](https://codeclimate.com/github/SimpleStateManager/SimpleStateManager)
 
@@ -16,7 +16,41 @@ To get started with SSM the first step is to include it in your project, you can
 ##Documentation
 Documentation can be found at http://www.simplestatemanager.com
 
+##Browser Support
+Version 3.x of SimpleStateManager and above supports the following browsers:
+
+* Internet Explorer 10+ (Internet Explorer 9 should work if you use a matchMedia polyfill)
+* Google Chrome
+* Mozilla Firefox
+* Opera
+* Apple Safari
+
+The library is tested across browser prior to each release and every commit is validated using TravisCI and BrowserStack.
+
+If you need to support Internet Explorer 8 or below their are two options available:
+
+* Use a matchMedia polyfill and a bind polfill
+* Use SimpleStateManager 2.X.X branch
+
 ##Release Log
+
+###3.1.2 - June 17th, 2016
+* Fixed a bug where IE11 would reject a media expression that is an empty string, switched to provide a media expersion that is always true as the default.
+
+###3.1.1 - March 8th, 2016
+* Fixed bug that prevented removing states correctly removing the listeners
+
+###3.1.0 - February 10th, 2016
+* Added isActive method back into library
+
+###3.0.0 - June 8th, 2015
+* Rewrite to use the matchMedia API
+* Add support for media queries
+* Major refactor
+* Remove legacy browser (IE 8 and below) support
+
+###2.4.1 - May 17, 2015
+* Fix browser width when browser is zoomed
 
 ###2.4.0 - December 29, 2014
 * Improved release process with version auto updating

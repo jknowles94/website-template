@@ -22,15 +22,14 @@
     "!/jquery.placeholder.min.js.map"
   ],
   "homepage": "https://github.com/mathiasbynens/jquery-placeholder",
-  "version": "2.1.3",
-  "_release": "2.1.3",
+  "version": "2.3.1",
+  "_release": "2.3.1",
   "_resolution": {
     "type": "version",
-    "tag": "v2.1.3",
-    "commit": "3442273d05f463a2f9177c2f49a67331df4c6807"
+    "tag": "v2.3.1",
+    "commit": "bd18712c2f6cc6be2dfd7310a89044b09610057e"
   },
-  "_source": "git://github.com/mathiasbynens/jquery-placeholder.git",
-  "_target": "~2.1.3",
-  "_originalSource": "jquery-placeholder",
-  "_direct": true
+  "_source": "https://github.com/mathiasbynens/jquery-placeholder.git",
+  "_target": "*",
+  "_originalSource": "jquery-placeholder"
 }
