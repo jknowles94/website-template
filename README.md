@@ -7,4 +7,4 @@ Mixins come mainly from Bootstrap with a couple I've added myself - mainly the R
 
 When using the updated slidebars plugin - use on('touchend click') event for the close functionallity to work on mobile devices
 
-For modernizer follow these instructions - http://stackoverflow.com/questions/27302498/bower-install-modernizr-where-is-modernizr-js
+For modernizer - create you own modernizr file depending on project via npm and grunt
