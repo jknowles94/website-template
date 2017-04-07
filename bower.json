@@ -4,7 +4,6 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.3.4",
     "jquery": "latest",
-    "modernizr": "latest",
     "SimpleStateManager": "latest",
     "respond": "latest",
     "jquery-waypoints": "latest",

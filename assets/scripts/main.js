@@ -31,7 +31,6 @@ var website = (function () {
 					minWidth: 1200
 				}
 			]);
-			ssm.ready();
 		}
 
 		function current(state) {
@@ -123,11 +122,11 @@ var website = (function () {
 			});
 
 			// SVG fallback
-			if (!Modernizr.svg) {
-				$('img[src*="svg"]').attr('src', function () {
-					return $(this).attr('src').replace('.svg', '.png');
-				});
-			}
+			// if (!Modernizr.svg) {
+			// 	$('img[src*="svg"]').attr('src', function () {
+			// 		return $(this).attr('src').replace('.svg', '.png');
+			// 	});
+			// }
 
 			$('input, textarea').placeholder();
 
