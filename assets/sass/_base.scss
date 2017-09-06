@@ -109,7 +109,7 @@ nav ul { list-style: none; list-style-image: none; }
  	transition: all 250ms;
 }
     .btn:hover, a:hover .btn {
-    	color: $color-grey-dark;
+    	color: lighten(#000, 40%);
     }
 
 .btn-group {
